@@ -1,0 +1,24 @@
+.todoWrapper {
+
+  text-align: left;
+  margin-bottom: 10px;
+}
+.removeTodo {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background-image: -webkit-linear-gradient(top,#ff000040 0,#FF7F50 100%);
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 2px;
+}
+.todoWrapper p {
+  width: 70%;
+  font-style: italic;
+  display: inline-block;
+}
+.removeTodo:hover {
+  color: #fff
+}

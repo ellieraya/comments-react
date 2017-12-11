@@ -1,0 +1,19 @@
+input {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  height: 40px;
+  border: 2px solid #8080806e;
+  display: block;
+}
+.btn {
+  width: 200px;
+  height: 40px;
+  font-weight: 400;
+  background-image: -webkit-linear-gradient(top,#a234b2 0,#8f5cc7fc 100%);
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.btn:hover{
+  background-image: -webkit-linear-gradient(top,#a234b2 0,#8f5cc7fc 100%);
+}
