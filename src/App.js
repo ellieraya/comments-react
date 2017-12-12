@@ -4,8 +4,20 @@ import './App.css';
 import Header from './components/header';
 import TodoInput  from'./components/todoInput';
 import TodoItem  from'./components/todoItem';
-import {browserRouter as Router} from 'react-router-dom'
+import {BrowserRouter as  Router, Route, Link} from 'react-router-dom';
+
 class App extends Component {
+  render (){
+    return(
+      <Router>
+        <div>
+          <Route exact path="/" component={Header}/>
+          <Route path="/todoInput" component={TodoInput}/>
+          <Route path="/todoItem" component={TodoItem}/>
+        </div>
+      </Router>
+    );
+  }
   constructor (props) {
     super(props);
     this.state= {
