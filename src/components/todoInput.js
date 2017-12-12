@@ -1,5 +1,6 @@
 import React from 'react';
 import './todoInput.css';
+import {BrowserRouter as  Router, Route, Link} from 'react-router-dom';
 
 export default class TodoInput extends React.Component {
   constructor(props){
@@ -24,7 +25,7 @@ export default class TodoInput extends React.Component {
     return(
       <div>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <button className="btn" onClick={() => this.addTodo(this.state.value)}> Write a Comment</button>
+        <Link to ="/todoItem"><button className="btn"> Write a Comments</button> </Link>
       </div>
     )
   }

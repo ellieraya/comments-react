@@ -13,7 +13,7 @@ export default class TodoItem extends React.Component {
   render(){
     return(
       <div className="todoWrapper">
-        <p>{this.props.todo.text}</p><button className="removeTodo" onClick={(e)=> this.removeTodo(this.props.id)}>remove</button>
+        <p>{this.props.todoInput}</p><button className="removeTodo" onClick={(e)=> this.removeTodo(this.props.id)}>remove</button>
       </div>
     )
   }

@@ -4,20 +4,18 @@ import './App.css';
 import Header from './components/header';
 import TodoInput  from'./components/todoInput';
 import TodoItem  from'./components/todoItem';
-import {BrowserRouter as  Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as  Router, Route, Link } from 'react-router-dom';
 
-class App extends Component {
-  render (){
-    return(
+const AppPath  = () => (
       <Router>
         <div>
           <Route exact path="/" component={Header}/>
-          <Route path="/todoInput" component={TodoInput}/>
-          <Route path="/todoItem" component={TodoItem}/>
+          <Route exact path="/todoInput" component={TodoInput}/>
+          <Route exact path="/todoItem" component={TodoItem}/>
         </div>
       </Router>
-    );
-  }
+    )
+class App extends Component {
   constructor (props) {
     super(props);
     this.state= {
@@ -46,19 +44,25 @@ class App extends Component {
     return (
       <div className="App">
         <div className="todo-wrapper">
-        <Header />
-        <TodoInput todoText="" addTodo={this.addTodo}/>
-        <ul>
+        const Home  = () => (
+          <div className="container">
+            <Header />
+
+          </div>
+        )
+        const TodoInput  = () => (<TodoInput todoText="" addTodo={this.addTodo}/>)
+        const TodoItem  = () => (<ul>
         {
           this.state.todos.map((todo) => {
             return < TodoItem todo={todo} key={todo.id} id= {todo.id} removeTodo={this.removeTodo}/>
           })
         }
         </ul>
+      )
         </div>
       </div>
     );
   }
 }
 
-export default App;
+export default AppPath
